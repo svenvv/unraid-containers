@@ -1,7 +1,7 @@
 
 # Modified From https://hub.docker.com/r/joly0/amp/dockerfile
 
-FROM ampinstancemanagerbase:latest
+FROM angleracket/amp-instancemanager-base:latest
 
 ENV AMPUSER=admin
 ENV AMPPASSWORD=changeme123
