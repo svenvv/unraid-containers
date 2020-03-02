@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>AMP</Name>
+    <Repository>angleracket/amp-instancemanager:latest</Repository>
+    <Registry>https://hub.docker.com/repository/docker/angleracket/amp-instancemanager</Registry>
+    <Network>bridge</Network>
+    <MyIP/>
+    <Shell>sh</Shell>
+    <Privileged>false</Privileged>
+    <Support>https://github.com/AngleRacket/unraid-containers/tree/master/amp/amp-instancemanager</Support>
+    <Project>https://cubecoders.com/AMP</Project>
+    <Overview>Debian 9 container hosting AMP, an instance manager similar in nature to Docker, but with built in support for many game servers. Minecraft support is especially robust.</Overview>
+    <Category>GameServers:</Category>
+    <WebUI/>
+    <TemplateURL>https://raw.githubusercontent.com/AngleRacket/unraid-containers/master/amp/amp-instancemanager/amp-unraid.xml</TemplateURL>
+    <Icon>https://cubecoders.com/favicon.png</Icon>
+    <ExtraParams>-i<ExtraParams/>
+    <PostArgs/>
+    <CPUset/>
+    <DonateText>If you like my work, feel free to donate.</DonateText>
+    <DonateLink>https://www.patreon.com/angleracket</DonateLink>
+    <Description></Description>
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish>
+            <Port>
+                <HostPort>8080</HostPort>
+                <ContainerPort>8080</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+        </Publish>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir>/mnt/user/appdata/amp</HostDir>
+            <ContainerDir>/data</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Environment/>
+    <Labels/>
+    <Config Name="Data" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/amp/</Config>
+    <Config Name="Admin Panel" Target="8080" Default="" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+</Container>
