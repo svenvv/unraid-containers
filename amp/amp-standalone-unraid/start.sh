@@ -4,7 +4,7 @@ set -e
 HOST=${HOST:-"0.0.0.0"}
 PORT=${PORT:-"8080"}
 USERNAME=${USERNAME:-"admin"}
-PASSWORD=${PASSWORD:-"password"}
+PASSWORD=${PASSWORD:-"changeme"}
 INSTANCE_NAME=${INSTANCE_NAME:-"Instance"}
 MODULE=${MODULE:-"ADS"}
 
