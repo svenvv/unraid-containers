@@ -62,4 +62,7 @@
     <Labels/>
     <Config Name="Data" Target="/data" Default="/data" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/amp/</Config>
     <Config Name="Admin Port" Target="8080" Default="8080" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+    <Config Name="License" Target="LICENSE" Default="PUT_YOUR_LICENSE_KEY_HERE" Mode="" Description="Container Variable: LICENSE" Type="Variable" Display="always" Required="true" Mask="false">PUT_YOUR_LICENSE_KEY_HERE</Config>
+    <Config Name="Admin User" Target="AMPUSER" Default="admin" Mode="" Description="Container Variable: AMPUSER" Type="Variable" Display="always" Required="true" Mask="false">admin</Config>
+    <Config Name="Admin Pass" Target="LICENSE" Default="changeme" Mode="" Description="Container Variable: AMPPASSWORD" Type="Variable" Display="always" Required="true" Mask="false">changeme</Config>
 </Container>
