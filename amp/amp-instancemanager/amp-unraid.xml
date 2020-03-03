@@ -16,7 +16,7 @@
 &#xD;
     </Overview>
     <Category>GameServers:</Category>
-    <WebUI>http://[IP]:[PORT:8080]<WebUI/>
+    <WebUI>http://[IP]:[PORT:8080]</WebUI>
     <TemplateURL>https://raw.githubusercontent.com/AngleRacket/unraid-containers/master/amp/amp-instancemanager/amp-unraid.xml</TemplateURL>
     <Icon>https://cubecoders.com/favicon.png</Icon>
     <ExtraParams>-i</ExtraParams>
