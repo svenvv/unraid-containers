@@ -45,20 +45,7 @@
             <Mode>rw</Mode>
         </Volume>
     </Data>
-    <Environment>
-        <Variable>
-            <Name>LICENCE</Name>
-            <Value>PUT_YOUR_LICENCE_KEY_HERE</Value>
-        </Variable>
-        <Variable>
-            <Name>USERNAME</Name>
-            <Value>admin</Value>
-        </Variable>
-        <Variable>
-            <Name>PASSWORD</Name>
-            <Value>changeme</Value>
-        </Variable>
-    </Environment>
+    <Environment/>
     <Labels/>
     <Config Name="Data" Target="/data" Default="/mnt/user/appdata/amp" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/amp</Config>
     <Config Name="Admin Port" Target="8080" Default="8080" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">8080</Config>
