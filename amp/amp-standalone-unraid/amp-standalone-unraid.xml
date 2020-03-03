@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>AMP-Standalone</Name>
+    <Repository>angleracket/amp-instancemanager:latest</Repository>
+    <Registry>https://hub.docker.com/repository/docker/angleracket/amp-instancemanager</Registry>
+    <Network>bridge</Network>
+    <Shell>sh</Shell>
+    <Privileged>false</Privileged>
+    <Support>https://github.com/AngleRacket/unraid-containers/tree/master/amp/amp-instancemanager</Support>
+    <Project>https://cubecoders.com/AMP</Project>
+    <Overview>
+[p]AMP Instance Manager is similar in nature to Docker, but with built-in support for many game servers.[p]&#xD;
+[h4]Configuration[/h4]&#xD;
+[p]At the very least, you must provide a license key![/p]&#xD;
+[p]You may also set the UN/PW for the admin panel.[/p]&#xD;
+&#xD;
+    </Overview>
+    <Category>GameServers:</Category>
+    <WebUI>http://[IP]:[PORT:8080]</WebUI>
+    <TemplateURL>https://raw.githubusercontent.com/AngleRacket/unraid-containers/master/amp/amp-instancemanager/amp-unraid.xml</TemplateURL>
+    <Icon>https://cubecoders.com/favicon.png</Icon>
+    <ExtraParams>-i</ExtraParams>
+    <PostArgs/>
+    <DonateText>If you like my work, feel free to donate.</DonateText>
+    <DonateLink>https://www.patreon.com/angleracket</DonateLink>
+    <Description>[p]This container is a minimal port of the official [a href='https://mosquitto.org/']Eclipse Mosquitto[/a] Docker container with minor tweaks to work more conveniently in unRAID.[/p]&#xD;
+[h4]Configuration[/h4]&#xD;
+[p]To set up paths and ports, see the descriptions in the unRAID docker settings page.[/p]&#xD;
+&#xD;
+    </Description>
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish>
+            <Port>
+                <HostPort>8080</HostPort>
+                <ContainerPort>8080</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+        </Publish>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir>/mnt/user/appdata/amp</HostDir>
+            <ContainerDir>/data</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Environment>
+        <Variable>
+            <Name>LICENCE</Name>
+            <Value>PUT_YOUR_LICENCE_KEY_HERE</Value>
+        </Variable>
+        <Variable>
+            <Name>USERNAME</Name>
+            <Value>admin</Value>
+        </Variable>
+        <Variable>
+            <Name>PASSWORD</Name>
+            <Value>changeme</Value>
+        </Variable>
+    </Environment>
+    <Labels/>
+    <Config Name="Data" Target="/data" Default="/mnt/user/appdata/amp" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/amp</Config>
+    <Config Name="Admin Port" Target="8080" Default="8080" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+    <Config Name="Instance Ports" Target="25500-25599" Default="25500-25599" Mode="tcp" Description="Instance Ports for Game Servers" Type="Port" Display="always" Required="true" Mask="false">25500-25599</Config>
+    <Config Name="Licence" Target="LICENCE" Default="PUT_YOUR_LICENSE_KEY_HERE" Mode="" Description="Container Variable: LICENCE" Type="Variable" Display="always" Required="true" Mask="false">PUT_YOUR_LICENCE_KEY_HERE</Config>
+    <Config Name="Module" Target="MODULE" Default="ADS" Mode="" Description="Container Variable: MODULE" Type="Variable" Display="always" Required="true" Mask="false">ADS</Config>
+    <Config Name="Admin User" Target="USERNAME" Default="admin" Mode="" Description="Container Variable: USERNAME" Type="Variable" Display="always" Required="true" Mask="false">admin</Config>
+    <Config Name="Admin Pass" Target="PASSWORD" Default="changeme" Mode="" Description="Container Variable: PASSWORD" Type="Variable" Display="always" Required="true" Mask="false">changeme</Config>
+</Container>
