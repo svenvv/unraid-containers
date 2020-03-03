@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
     <Name>AMP-Standalone</Name>
-    <Repository>angleracket/amp-instancemanager:latest</Repository>
+    <Repository>angleracket/amp-standalone-unraid:latest</Repository>
     <Registry>https://hub.docker.com/repository/docker/angleracket/amp-instancemanager</Registry>
     <Network>bridge</Network>
     <Shell>sh</Shell>
