@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <Container version="2">
     <Name>AMP-Standalone</Name>
-    <Repository>cubecoders/amp:latest</Repository>
-    <Registry>https://hub.docker.com/r/cubecoders/amp</Registry>
+    <Repository>angleracket/amp:latest</Repository>
+    <Registry>https://hub.docker.com/repository/registry-1.docker.io/angleracket/amp/</Registry>
     <Network>bridge</Network>
     <Shell>sh</Shell>
     <Privileged>false</Privileged>
-    <Support>https://github.com/AngleRacket/unraid-containers/tree/master/amp/amp-standalone-unraid</Support>
+    <Support>https://github.com/AngleRacket/unraid-containers/tree/master/amp</Support>
     <Project>https://cubecoders.com/AMP</Project>
     <Overview>
 [p]AMP Instance Manager is similar in nature to Docker, but with built-in support for many game servers.[p]&#xD;
