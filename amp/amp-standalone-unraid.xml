@@ -47,7 +47,7 @@
     </Data>
     <Environment/>
     <Labels/>
-    <Config Name="Data" Target="/home/amp" Default="/mnt/user/appdata/amp" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/amp</Config>
+    <Config Name="Data" Target="/home/amp" Default="/mnt/user/appdata/amp" Mode="rw" Description="Container Path: /home/amp" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/amp</Config>
     <Config Name="Admin Port" Target="8080" Default="8080" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">8080</Config>
     <Config Name="Instance Ports" Target="25500-25599" Default="25500-25599" Mode="tcp" Description="Instance Ports for Game Servers" Type="Port" Display="always" Required="true" Mask="false">25500-25599</Config>
     <Config Name="Admin User" Target="ANSWER_AMPUSER" Default="admin" Mode="" Description="Container Variable: USERNAME" Type="Variable" Display="always" Required="true" Mask="false">admin</Config>
