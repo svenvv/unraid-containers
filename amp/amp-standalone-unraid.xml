@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>AMP-Standalone</Name>
+    <Repository>cubecoders/amp:latest</Repository>
+    <Registry>https://hub.docker.com/r/cubecoders/amp</Registry>
+    <Network>bridge</Network>
+    <Shell>sh</Shell>
+    <Privileged>false</Privileged>
+    <Support>https://github.com/AngleRacket/unraid-containers/tree/master/amp/amp-standalone-unraid</Support>
+    <Project>https://cubecoders.com/AMP</Project>
+    <Overview>
+[p]AMP Instance Manager is similar in nature to Docker, but with built-in support for many game servers.[p]&#xD;
+[h4]Configuration[/h4]&#xD;
+[p]At the very least, you must provide a license key![/p]&#xD;
+[p]You may also set the UN/PW for the admin panel.[/p]&#xD;
+&#xD;
+    </Overview>
+    <Category>GameServers:</Category>
+    <WebUI>http://[IP]:[PORT:8080]</WebUI>
+    <TemplateURL>https://raw.githubusercontent.com/AngleRacket/unraid-containers/master/amp/amp-instancemanager/amp-unraid.xml</TemplateURL>
+    <Icon>https://cubecoders.com/favicon.png</Icon>
+    <ExtraParams>-it</ExtraParams>
+    <PostArgs/>
+    <DonateText>If you like my work, feel free to donate.</DonateText>
+    <DonateLink>https://www.patreon.com/angleracket</DonateLink>
+    <Description>[p]This container is a minimal port of the official [a href='https://mosquitto.org/']Eclipse Mosquitto[/a] Docker container with minor tweaks to work more conveniently in unRAID.[/p]&#xD;
+[h4]Configuration[/h4]&#xD;
+[p]To set up paths and ports, see the descriptions in the unRAID docker settings page.[/p]&#xD;
+&#xD;
+    </Description>
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish>
+            <Port>
+                <HostPort>8080</HostPort>
+                <ContainerPort>8080</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+        </Publish>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir>/mnt/user/appdata/amp</HostDir>
+            <ContainerDir>/home/amp</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+    </Data>
+    <Environment/>
+    <Labels/>
+    <Config Name="Data" Target="/home/amp" Default="/mnt/user/appdata/amp" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/amp</Config>
+    <Config Name="Admin Port" Target="8080" Default="8080" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+    <Config Name="Instance Ports" Target="25500-25599" Default="25500-25599" Mode="tcp" Description="Instance Ports for Game Servers" Type="Port" Display="always" Required="true" Mask="false">25500-25599</Config>
+    <Config Name="Admin User" Target="ANSWER_AMPUSER" Default="admin" Mode="" Description="Container Variable: USERNAME" Type="Variable" Display="always" Required="true" Mask="false">admin</Config>
+    <Config Name="Admin Pass" Target="ANSWER_AMPPASS" Default="changeme" Mode="" Description="Container Variable: PASSWORD" Type="Variable" Display="always" Required="true" Mask="false">changeme</Config>
+</Container>
