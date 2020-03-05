@@ -10,7 +10,7 @@ To Install:
 2. Select the docker tab
 3. Locate the Template Repositories list at the bottom of the page
 4. Add this repo URL to the list (on a new line) : https://github.com/AngleRacket/unraid-containers/tree/master/amp
-5. Then, on the same page, click the "new container" button and select "amp" from the list
+5. Then, on the same page, click the "add container" button and select "amp" from the list
 
 Notes:
 1. Make sure the port range for instances do not conflict with your other containers
