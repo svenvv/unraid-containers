@@ -2,6 +2,8 @@
 
 AMP is a server manager with built-in support for many game types. Specifically, it is the best Minecraft server admin panel around (my opinion). It does require a paid license, but it's a one-time and low cost.
 
+This repository is hosting a container and template suitable for UNRAID 6.8+
+
 For a full description of AMP, see: https://cubecoders.com/AMP
 
 To Install:
