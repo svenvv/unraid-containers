@@ -12,10 +12,11 @@ EXPOSE 34197-34297
 ENV ANSWER_AMPUSER=admin
 ENV ANSWER_AMPPASS=changeme123
 
-RUN export ANSWER_SYSPASSWORD=$(cat /proc/sys/kernel/random/uuid) && \
+RUN export CHANGE_DATE=20200308 && \
+    export ANSWER_SYSPASSWORD=$(cat /proc/sys/kernel/random/uuid) && \
     export USE_ANSWERS=1 && \
     export SKIP_INSTALL=1 && \
-    bash -c "bash <(wget -qO- getamp.sh)" && \
+    bash -c "bash <(wget -qO- https://cubecoders.com/getamp.sh)" && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
