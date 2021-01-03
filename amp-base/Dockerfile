@@ -24,11 +24,12 @@ ENV LC_ALL en_US.UTF-8
 RUN apt-get install -y cron lib32gcc1 gnupg coreutils wget inetutils-ping tmux socat unzip git procps lib32gcc1 lib32stdc++6 net-tools nano && \
     export EDITOR=nano
 
-#install adoptOpenJDK11 java runtime
+#install adoptOpenJDK11 & adoptOpenJDK11 java runtimes
 RUN apt-get install -y apt-transport-https ca-certificates wget dirmngr software-properties-common &&\
     wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add - && \    
     add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ && \
     apt update && \
+    apt-get install -y adoptopenjdk-8-hotspot && \
     apt-get install -y adoptopenjdk-11-hotspot
 
 #cleanup
