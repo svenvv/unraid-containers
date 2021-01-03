@@ -1,4 +1,4 @@
-FROM angleracket/amp-base:latest
+FROM inktvip/amp-base:latest
 
 EXPOSE 8080-8180
 EXPOSE 5678-5688
