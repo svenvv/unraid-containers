@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
     <Name>AMP-Standalone</Name>
-    <Repository>angleracket/amp:latest</Repository>
-    <Registry>https://hub.docker.com/repository/registry-1.docker.io/angleracket/amp/</Registry>
+    <Repository>inktvip/amp:latest</Repository>
+    <Registry>https://hub.docker.com/repository/registry-1.docker.io/inktvip/amp-jdk11/</Registry>
     <Network>bridge</Network>
     <Shell>sh</Shell>
     <Privileged>false</Privileged>
