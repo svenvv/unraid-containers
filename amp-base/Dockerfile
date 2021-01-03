@@ -29,7 +29,7 @@ RUN apt-get install -y apt-transport-https ca-certificates wget dirmngr software
     wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add - && \    
     add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ && \
     apt update && \
-    apt-get install -y adoptopenjdk-8-hotspot
+    apt-get install -y adoptopenjdk-11-hotspot
 
 #cleanup
 RUN apt -q autoremove --purge && \
